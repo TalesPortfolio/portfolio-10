@@ -1,8 +1,8 @@
 "use client";
 
 import GlobalStyles from "../styles/createGlobalStyle";
-import HeroSection from "../pages/HeroSection/page";
-import Navbar from "../pages/NavBar/page";
+import HeroSection from "../componets/HeroSection/page";
+import Navbar from "../componets/NavBar/page";
 
 export default function Home() {
   return (
