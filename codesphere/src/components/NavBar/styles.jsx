@@ -31,19 +31,40 @@ export const Logo = styled.img`
   }
 `;
 
+export const Hamburger = styled.div`
+  display: none;
+  font-size: 2rem;
+  color: #00ffff;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export const Menu = styled.ul`
   display: flex;
   gap: 2rem;
   list-style: none;
 
   @media (max-width: 768px) {
-    gap: 1rem; /* Reduz o espaço entre os itens do menu */
-  }
+    display: ${(props) => (props.isOpen ? "block" : "none")};
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
 
-  @media (max-width: 480px) {
-    display: none; /* Esconde o menu em telas pequenas */
+    a {
+      display: block;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
   }
 `;
+
 
 export const MenuItem = styled.a`
   font-size: 1.2rem;
@@ -89,3 +110,4 @@ export const Title = styled.h1`
     font-size: 1.5rem; /* Ajusta o título em telefones */
   }
 `;
+

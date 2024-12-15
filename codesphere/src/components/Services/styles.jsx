@@ -7,7 +7,7 @@ export const ServicesContainer = styled.section`
   padding: 5rem 2rem;
   color: #fff;
   text-align: center;
-  padding-bottom: 200px;
+  padding-top: 200px;
 
   display: flex;
   flex-direction: column;
@@ -35,30 +35,27 @@ export const ServicesContent = styled.div`
   div {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 `;
 
 export const ServiceCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #00ffff;
   padding: 2rem;
   margin: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 300px;
+  width: calc(33.333% - 2rem); /* 3 cards por linha */
 
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #00ffff;
+  @media (max-width: 768px) {
+    width: calc(50% - 2rem); /* 2 cards por linha */
   }
 
-  p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ddd;
+  @media (max-width: 480px) {
+    width: 100%; /* 1 card por linha */
   }
 `;
+

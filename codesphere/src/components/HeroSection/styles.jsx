@@ -4,22 +4,23 @@ import styled from "styled-components";
 export const HeroContainer = styled.section`
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Garante altura mínima */
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   color: #fff;
   text-align: center;
-  padding-top: 380px;
+  padding-top: 180px;
 
   @media (max-width: 768px) {
-    padding-top: 120px; /* Ajusta o topo para tablets */
+    padding-top: 100px; /* Reduz padding em tablets */
   }
 
   @media (max-width: 480px) {
-    padding-top: 100px; /* Ajusta o topo para telefones */
+    padding-top: 80px; /* Reduz padding em telefones */
   }
 `;
+
 
 export const VideoBackground = styled.video`
   position: fixed;
@@ -32,28 +33,20 @@ export const VideoBackground = styled.video`
 `;
 
 export const Content = styled.div`
-  position: relative;
-  z-index: 1;
-
   h1 {
-    font-size: 4rem;
-    margin: 0;
-    color: #00ffff;
+    font-size: 3rem;
 
     @media (max-width: 768px) {
-      font-size: 2.5rem; /* Reduz o tamanho para tablets */
+      font-size: 2.5rem;
     }
 
     @media (max-width: 480px) {
-      font-size: 2rem; /* Reduz o tamanho para telefones */
+      font-size: 2rem;
     }
   }
 
   p {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    color: #ffffff;
-    font-weight: bold;
+    font-size: 1.5rem;
 
     @media (max-width: 768px) {
       font-size: 1.2rem;
@@ -64,22 +57,3 @@ export const Content = styled.div`
     }
   }
 `;
-
-
-//  export const Button = styled.a`
-//    display: inline-block;
-//    margin-top: 1.5rem;
-//    padding: 0.8rem 1.5rem;
-//    font-size: 1.2rem;
-//    font-weight: bold;
-//    color: #000;
-//    background-color: #00ffff; /* Azul neon */
-//    border-radius: 5px;
-//    text-decoration: none;
-//    transition: background-color 0.3s;
-//    &:hover {
-//      background-color: #00cccc; /* Um tom mais escuro ao passar o mouse */
-//      color: #fff;
-//      }
-//    `;
-

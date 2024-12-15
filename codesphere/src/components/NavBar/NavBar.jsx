@@ -1,16 +1,19 @@
-import React from "react";
-import { Nav, Logo, Menu, MenuItem, Title, DivLogo } from "./styles"; // Importa os estilos do arquivo styles.jsx
+import React, { useState } from "react";
+import { Nav, Logo, Menu, MenuItem, Title, DivLogo, Hamburger } from "./styles";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Nav>
       <DivLogo>
-        <Logo src="/images/logo.png" alt="CodeSphere Logo" href="#logo" />
+        <Logo src="/images/logo.png" alt="CodeSphere Logo" />
         <a href="#top">
           <Title>CodeSphere</Title>
         </a>
       </DivLogo>
-      <Menu>
+      <Hamburger onClick={() => setIsOpen(!isOpen)}>☰</Hamburger>
+      <Menu isOpen={isOpen}>
         <MenuItem href="#home">Home</MenuItem>
         <MenuItem href="#services">Services</MenuItem>
         <MenuItem href="#team">Team</MenuItem>
