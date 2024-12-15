@@ -19,9 +19,10 @@ const Team = () => {
           <MemberInfo>
             <h3>Tales</h3>
             <p>
-              Aluno da 42 Luxembourg e apaixonado por tecnologia. Adoro resolver
-              problemas complexos e criar soluções inovadoras.
-            </p>
+      Desenvolvedor apaixonado por tecnologia com ampla experiência em diversas linguagens de programação, como JavaScript, PHP, C e C++. 
+      Especialista em front-end com React, HTML5 e CSS, além de sólido conhecimento em back-end utilizando PHP e bancos de dados como MySQL e MongoDB. 
+      Proficiente em Linux, frameworks modernos e otimização de SEO, pronto para enfrentar desafios e criar soluções eficientes.
+    </p>
             <SocialLinks>
               <a
                 href="https://github.com/tales1982"
