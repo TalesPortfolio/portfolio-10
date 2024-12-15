@@ -3,7 +3,7 @@ import { HeroContainer, VideoBackground, Content, } from "./styles";
 
 const HeroSection = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       
       <VideoBackground autoPlay loop muted>
         <source src="/bg.mp4" type="video/mp4" />
