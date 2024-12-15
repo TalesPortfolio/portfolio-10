@@ -1,5 +1,6 @@
+"use client";
 import styled from "styled-components";
-import colors from "@/styles/colors";
+import colors from "../../styles/colors";
 
 export const Nav = styled.nav`
   display: flex;

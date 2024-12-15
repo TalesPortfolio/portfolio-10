@@ -1,3 +1,4 @@
+"use client";
 const colors = {
     neonBlue: "#00FFFF",
     darkPurple: "#2E005C",
