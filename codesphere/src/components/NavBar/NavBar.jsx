@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Nav>
+    <Nav> 
       <DivLogo>
         <Logo src="/images/logo.png" alt="CodeSphere Logo" />
         <a href="#top">
