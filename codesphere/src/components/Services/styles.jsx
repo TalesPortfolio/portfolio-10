@@ -49,35 +49,48 @@ export const ServiceCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   width: calc(33.333% - 2rem); /* 3 cards por linha */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+
+  &:hover {
+    transform: scale(1.05); /* Leve zoom */
+    //box-shadow: 0 0 20px #00ffff; /* Efeito neon */
+  }
 
   img {
     width: 400px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease; /* Transição para o efeito neon */
+
+    &:hover {
+      box-shadow: 0 0 20px #00ffff; /* Efeito neon na imagem */
+    }
   }
 
   @media (max-width: 1024px) {
     width: calc(50% - 2rem); /* 2 cards por linha */
 
     img {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 
   @media (max-width: 768px) {
     width: calc(50% - 2rem); /* 2 cards por linha */
 
     img {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 
   @media (max-width: 480px) {
     width: 100%; /* 1 card por linha */
+
     img {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 `;
+
 
