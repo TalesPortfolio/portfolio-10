@@ -31,16 +31,21 @@ export const Logo = styled.img`
   }
 `;
 
-export const Hamburger = styled.div`
+
+export const Hamburger = styled(({ isOpen, ...rest }) => <div {...rest} />)`
   display: none;
   font-size: 2rem;
   color: #00ffff;
   cursor: pointer;
 
   @media (max-width: 768px) {
-    display: block;
+    display: ${(props) => (props.isOpen ? "none" : "block")};
+    transition: all 0.3s ease;
   }
 `;
+
+
+
 
 export const Menu = styled.ul`
   display: flex;
