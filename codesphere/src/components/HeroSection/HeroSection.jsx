@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroContainer, VideoBackground, Content, } from "./styles";
+import { HeroContainer, VideoBackground, Content } from "./styles";
 
 const HeroSection = () => {
   return (
@@ -7,21 +7,16 @@ const HeroSection = () => {
       
       <VideoBackground autoPlay loop muted>
         <source src="/bg.mp4" type="video/mp4" />
-        Seu navegador não suporta vídeo em HTML5.
+        Votre navigateur ne supporte pas la vidéo en HTML5.
       </VideoBackground>
 
-      {/* Conteúdo principal */}
+      {/* Contenu principal */}
       <Content>
-  <h1>Bem-vindo ao CodeSphere</h1>
-  <p>Seu Futuro, Nosso Código</p>
-  <p>Código inteligente, soluções inovadoras.</p>
-  <p>Soluções tecnológicas que conectam, inovam e transformam.</p>
-
-
-</Content>
-
-
-     
+        <h1>Bienvenue à CodeSphere</h1>
+        <p>Votre avenir, notre code</p>
+        <p>Code intelligent, solutions innovantes.</p>
+        <p>Des solutions technologiques qui connectent, innovent et transforment.</p>
+      </Content>
 
     </HeroContainer>
   );
