@@ -46,7 +46,7 @@ const Team = () => {
           </MemberInfo>
         </MemberCard>
         <MemberCard>
-          <Avatar src="/images/thales-avatar.png" alt="Avatar de Sandro" />
+          <Avatar src="/images/sandro.png" alt="Avatar de Sandro" />
           <MemberInfo>
             <h3>Sandro</h3>
             <p>
