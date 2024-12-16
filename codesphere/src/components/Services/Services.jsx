@@ -37,7 +37,7 @@ const Services = () => {
           <ServiceCard>
             <img src="images/web3.png" alt="Développement d'Applications Web3" />
             <h3>Développement d'Applications Web3</h3>
-            <p>Création de solutions décentralisées avec un focus sur la blockchain.</p>
+            <p>Création de solutions décentralisées avec un focus sur la blockchain smart contract.</p>
           </ServiceCard>
         </div>
       </ServicesContent>
