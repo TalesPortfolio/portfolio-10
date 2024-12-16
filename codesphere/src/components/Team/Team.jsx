@@ -15,7 +15,7 @@ const Team = () => {
       <TeamContent>
         {/* Carte de Thales */}
         <MemberCard>
-          <Avatar src="/images/tales3.png" alt="Avatar de Tales" />
+          <Avatar src="/images/tales.jpeg" alt="Avatar de Tales" />
           <MemberInfo>
             <h3>Tales</h3>
             <p>
