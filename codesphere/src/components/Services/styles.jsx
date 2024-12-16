@@ -44,18 +44,40 @@ export const ServiceCard = styled.div`
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #00ffff;
-  padding: 2rem;
+  padding: 1rem;
   margin: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   width: calc(33.333% - 2rem); /* 3 cards por linha */
 
+  img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: calc(50% - 2rem); /* 2 cards por linha */
+
+    img {
+    width: 100%;
+  }
+  }
+
   @media (max-width: 768px) {
     width: calc(50% - 2rem); /* 2 cards por linha */
+
+    img {
+    width: 100%;
+  }
   }
 
   @media (max-width: 480px) {
     width: 100%; /* 1 card por linha */
+    img {
+    width: 100%;
+  }
   }
 `;
 

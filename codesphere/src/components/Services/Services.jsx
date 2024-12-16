@@ -10,31 +10,36 @@ const Services = () => {
 
         <div>
           <ServiceCard>
-            <h3>Desenvolvimento Web</h3>
-            <p>Criação de sites modernos e responsivos para sua empresa.</p>
+            <img src="images/app.jpg" alt="Desenvolvimento de Aplicações Web" />
+            <h3>Desenvolvimento de Aplicações Web</h3>
+            <p>Criação de interfaces dinâmicas e responsivas com React, NextJs, Next, Vite, JavaScript, Typescript,  .</p>
           </ServiceCard>
           <ServiceCard>
-            <h3>Sistemas Personalizados</h3>
-            <p>Implementação de sistemas sob medida para suas necessidades.</p>
+            <img src="images/webdev.jpg" alt="Desenvolvimento de Sites Responsivos" />
+            <h3>Desenvolvimento de Sites Responsivos</h3>
+            <p>Projetos modernos utilizando HTML5, CSS3, Foundation, Bulma, Tailwind, Bootstrap.</p>
           </ServiceCard>
           <ServiceCard>
-            <h3>Consultoria Técnica</h3>
-            <p>Ajuda especializada para resolver desafios tecnológicos.</p>
+            <img src="images/bd.jpg" alt="Consultoria em Bancos de Dados" />
+            <h3>Consultoria em Bancos de Dados</h3>
+            <p>Otimização e modelagem de bancos de dados como Oracle, MongoDB e MySQL.</p>
           </ServiceCard>
           <ServiceCard>
-            <h3>Desenvolvimento Web</h3>
-            <p>Criação de sites modernos e responsivos para sua empresa.</p>
+            <img src="images/backend.jpg" alt="Desenvolvimento Backend" />
+            <h3>Desenvolvimento Backend</h3>
+            <p>Construção de backends robustos utilizando PHP e frameworks associados.</p>
           </ServiceCard>
           <ServiceCard>
-            <h3>Sistemas Personalizados</h3>
-            <p>Implementação de sistemas sob medida para suas necessidades.</p>
+            <img src="images/game.avif" alt="Desenvolvimento de Jogos" />
+            <h3>Desenvolvimento de Jogos</h3>
+            <p>Criação de jogos e aplicações gráficas com a linguagem C.</p>
           </ServiceCard>
           <ServiceCard>
-            <h3>Consultoria Técnica</h3>
-            <p>Ajuda especializada para resolver desafios tecnológicos.</p>
+            <img src="images/web3.png" alt="Desenvolvimento de Aplicações Web3" />
+            <h3>Desenvolvimento de Aplicações Web3</h3>
+            <p>Criação de soluções descentralizadas com foco em blockchain.</p>
           </ServiceCard>
         </div>
-        
       </ServicesContent>
     </ServicesContainer>
   );
