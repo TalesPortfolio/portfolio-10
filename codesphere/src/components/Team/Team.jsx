@@ -11,18 +11,22 @@ import {
 const Team = () => {
   return (
     <TeamContainer id="team">
-      <h2>Conheça Nossa Equipe</h2>
+      <h2>Rencontrez Notre Équipe</h2>
       <TeamContent>
-        {/* Card do Thales */}
+        {/* Carte de Thales */}
         <MemberCard>
-        <Avatar src="/images/tales3.png"  alt="Tales Avatar" />
+          <Avatar src="/images/tales3.png" alt="Avatar de Tales" />
           <MemberInfo>
             <h3>Tales</h3>
             <p>
-      Desenvolvedor apaixonado por tecnologia com ampla experiência em diversas linguagens de programação, como JavaScript, PHP, C e C++. 
-      Especialista em front-end com React, HTML5 e CSS, além de sólido conhecimento em back-end utilizando PHP e bancos de dados como MySQL e MongoDB. 
-      Proficiente em Linux, frameworks modernos e otimização de SEO, pronto para enfrentar desafios e criar soluções eficientes.
-    </p>
+              Développeur passionné par la technologie avec une vaste expérience dans
+              divers langages de programmation, tels que JavaScript, PHP, C et C++, Solidity.
+              Spécialiste du front-end avec React, HTML5 et CSS, avec une solide
+              connaissance du back-end en utilisant PHP et des bases de données comme
+              MySQL et MongoDB. Compétent en Linux, frameworks modernes et
+              optimisation SEO, prêt à relever des défis et à créer des solutions
+              efficaces.
+            </p>
             <SocialLinks>
               <a
                 href="https://github.com/tales1982"
@@ -42,12 +46,14 @@ const Team = () => {
           </MemberInfo>
         </MemberCard>
         <MemberCard>
-          <Avatar src="/images/thales-avatar.png" alt="Sandro Avatar" />
+          <Avatar src="/images/thales-avatar.png" alt="Avatar de Sandro" />
           <MemberInfo>
             <h3>Sandro</h3>
             <p>
-              Aluno da 42 Luxembourg e apaixonado por tecnologia. Adoro resolver
-              problemas complexos e criar soluções inovadoras.
+              Étudiant à 42 Luxembourg avec une expérience en Cobol, C et C++.
+              Passionné par la programmation et les solutions logicielles robustes,
+              il aime relever des défis complexes et perfectionner ses compétences
+              dans le développement logiciel.
             </p>
             <SocialLinks>
               <a
@@ -68,12 +74,14 @@ const Team = () => {
           </MemberInfo>
         </MemberCard>
         <MemberCard>
-          <Avatar src="/images/andre.jpeg" alt="Andre Avatar" />
+          <Avatar src="/images/andre.jpeg" alt="Avatar d'Andre" />
           <MemberInfo>
             <h3>Andre</h3>
             <p>
-              Aluno da 42 Luxembourg e apaixonado por tecnologia. Adoro resolver
-              problemas complexos e criar soluções inovadoras.
+              Spécialisé en business intelligence et data analytics, avec une expertise
+              en Python, Power BI, SQL et une solide connaissance du GDPR.
+              Passionné par l'analyse de données et la création de solutions stratégiques
+              pour améliorer les performances des entreprises.
             </p>
             <SocialLinks>
               <a
@@ -94,12 +102,13 @@ const Team = () => {
           </MemberInfo>
         </MemberCard>
         <MemberCard>
-          <Avatar src="/images/philipe.jpeg" alt="Philipe Avatar" />
+          <Avatar src="/images/philipe.jpeg" alt="Avatar de Philipe" />
           <MemberInfo>
             <h3>Philipe</h3>
             <p>
-              Aluno da 42 Luxembourg e apaixonado por tecnologia. Adoro resolver
-              problemas complexos e criar soluções inovadoras.
+              Étudiant à 42 Luxembourg avec des compétences en back-end, Blockchain, développement
+              de jeux en C et connaissances en réseaux. Passionné par la technologie
+              et toujours en quête d'apprentissage.
             </p>
             <SocialLinks>
               <a
