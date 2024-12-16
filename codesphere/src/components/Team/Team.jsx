@@ -57,7 +57,7 @@ const Team = () => {
             </p>
             <SocialLinks>
               <a
-                href="https://github.com/seuGitHub"
+                href="https://github.com/WeberSandro"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -85,7 +85,7 @@ const Team = () => {
             </p>
             <SocialLinks>
               <a
-                href="https://github.com/seuGitHub"
+                href="https://github.com/AndreLuiz-Cardoso"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -112,7 +112,7 @@ const Team = () => {
             </p>
             <SocialLinks>
               <a
-                href="https://github.com/tales1982"
+                href="https://github.com/LuisFilipePires"
                 target="_blank"
                 rel="noopener noreferrer"
               >
