@@ -64,7 +64,7 @@ const Team = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/seuLinkedIn"
+                href="https://www.linkedin.com/in/sandro-weber-48b97a311/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -92,7 +92,7 @@ const Team = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/seuLinkedIn"
+                href="https://www.linkedin.com/in/andre-l-cardoso/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -119,7 +119,7 @@ const Team = () => {
                 GitHub
               </a>
               <a
-                href="https://www.linkedin.com/in/tales-lima-de-paula/"
+                href="https://www.linkedin.com/in/luis-fil-5b5a8a136/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
