@@ -50,7 +50,7 @@ const Team = () => {
           <MemberInfo>
             <h3>Sandro</h3>
             <p>
-              Étudiant à 42 Luxembourg avec une expérience en Cobol, C et C++.
+            Développeur avec une expérience en Cobol, SQL, C et C++.
               Passionné par la programmation et les solutions logicielles robustes,
               il aime relever des défis complexes et perfectionner ses compétences
               dans le développement logiciel.
@@ -106,7 +106,7 @@ const Team = () => {
           <MemberInfo>
             <h3>Philipe</h3>
             <p>
-              Étudiant à 42 Luxembourg avec des compétences en back-end, Blockchain, développement
+            Développeur avec des compétences en back-end, Blockchain, développement
               de jeux en C et connaissances en réseaux. Passionné par la technologie
               et toujours en quête d'apprentissage.
             </p>
