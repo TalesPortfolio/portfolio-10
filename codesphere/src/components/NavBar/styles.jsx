@@ -39,21 +39,18 @@ export const Hamburger = styled(({ isOpen, ...rest }) => <div {...rest} />)`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    display: ${(props) => (props.isOpen ? "none" : "block")};
+    display: block;
     transition: all 0.3s ease;
   }
 `;
 
-
-
-
-export const Menu = styled.ul`
+export const Menu = styled(({ isOpen, ...rest }) => <ul {...rest} />)`
   display: flex;
   gap: 2rem;
   list-style: none;
 
   @media (max-width: 768px) {
-    display: ${(props) => (props.isOpen ? "block" : "none")};
+    display: ${({ isOpen }) => (isOpen ? "block" : "none")};
     position: absolute;
     top: 100px;
     left: 0;
@@ -69,6 +66,7 @@ export const Menu = styled.ul`
     }
   }
 `;
+
 
 
 export const MenuItem = styled.a`

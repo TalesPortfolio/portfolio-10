@@ -1,23 +1,34 @@
-import React from "react";
-import { HeroContainer, VideoBackground, Content } from "./styles";
+import React, { useState } from "react";
+import { HeroContainer, VideoBackground, VideoFallback, Content } from "./styles";
 
 const HeroSection = () => {
+  const [isVideoError, setIsVideoError] = useState(false);
+
   return (
     <HeroContainer id="home">
-      
-      <VideoBackground autoPlay loop muted>
-        <source src="/bg.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la vidéo en HTML5.
-      </VideoBackground>
+      {/* Vídeo de Fundo */}
+      {!isVideoError && (
+        <VideoBackground
+          autoPlay
+          loop
+          muted
+          playsInline
+          onError={() => setIsVideoError(true)} // Se o vídeo falhar
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+        </VideoBackground>
+      )}
 
-      {/* Contenu principal */}
+      {/* Fallback: Imagem estática */}
+      {isVideoError && <VideoFallback />}
+
+      {/* Conteúdo principal */}
       <Content>
         <h1>Bienvenue à CodeSphere</h1>
         <p>Votre avenir, notre code</p>
         <p>Code intelligent, solutions innovantes.</p>
         <p>Des solutions technologiques qui connectent, innovent et transforment.</p>
       </Content>
-
     </HeroContainer>
   );
 };

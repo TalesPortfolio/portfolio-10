@@ -17,21 +17,11 @@ const Navbar = () => {
         {!isOpen ? "☰" : "✖"} {/* Alterna entre ícones ☰ e ✖ */}
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuItem href="#home" onClick={() => setIsOpen(false)}>
-          Home
-        </MenuItem>
-        <MenuItem href="#services" onClick={() => setIsOpen(false)}>
-          Services
-        </MenuItem>
-        <MenuItem href="#team" onClick={() => setIsOpen(false)}>
-          Team
-        </MenuItem>
-        <MenuItem href="#projects" onClick={() => setIsOpen(false)}>
-          Projects
-        </MenuItem>
-        <MenuItem href="#contact" onClick={() => setIsOpen(false)}>
-          Contact
-        </MenuItem>
+        <MenuItem href="#home">Home</MenuItem>
+        <MenuItem href="#services">Services</MenuItem>
+        <MenuItem href="#team">Team</MenuItem>
+        <MenuItem href="#projects">Projects</MenuItem>
+        <MenuItem href="#contact">Contact</MenuItem>
       </Menu>
     </Nav>
   );

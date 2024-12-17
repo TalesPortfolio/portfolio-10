@@ -23,39 +23,36 @@ export const HeroContainer = styled.section`
   }
 `;
 
-
 export const VideoBackground = styled.video`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantém o vídeo coberto */
+  object-fit: cover;
+  z-index: -2;
+`;
+
+export const VideoFallback = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img2.jpg') center center / cover no-repeat;
   z-index: -1;
 `;
 
 export const Content = styled.div`
+  text-align: center;
+  z-index: 1;
+
   h1 {
     font-size: 3rem;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 2rem;
-    }
+    margin: 0;
   }
 
   p {
     font-size: 1.5rem;
-
-    @media (max-width: 768px) {
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1rem;
-    }
   }
 `;
