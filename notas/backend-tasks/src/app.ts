@@ -6,13 +6,13 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://bloco-note.vercel.app/',
   credentials: true,
 }))
 
 app.use(userRoutes)
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`)
