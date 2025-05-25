@@ -1,0 +1,168 @@
+
+Updated saved memory
+Perfeito, Thales! Agora que você já tem o frontend bem estruturado com Redux, React Router e os componentes prontos, vamos começar o backend do zero. A ideia é criar uma API que permita persistir as tarefas no banco PostgreSQL da Hetzner.
+
+✅ 1. Estrutura básica do backend
+Crie uma pasta chamada backend-tasks e dentro dela inicialize o projeto:
+
+bash
+Copy
+Edit
+mkdir backend-tasks
+cd backend-tasks
+npm init -y
+✅ 2. Instale as dependências
+bash
+Copy
+Edit
+npm install express cors dotenv pg
+npm install --save-dev typescript ts-node-dev @types/node @types/express
+✅ 3. Configure o TypeScript
+Crie o arquivo tsconfig.json:
+
+json
+Copy
+Edit
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+✅ 4. Estrutura de pastas
+bash
+Copy
+Edit
+mkdir src
+touch src/index.ts
+touch .env
+✅ 5. Configure o .env
+env
+Copy
+Edit
+PORT=4000
+DATABASE_URL=postgresql://tales:Theo22Thomas22@localhost:5432/remindersDB
+✅ 6. Crie o servidor básico
+ts
+Copy
+Edit
+// src/index.ts
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
+import taskRoutes from './routes/taskRoutes'
+
+dotenv.config()
+
+const app = express()
+app.use(cors())
+app.use(express.json())
+
+app.use('/api/tasks', taskRoutes)
+
+const PORT = process.env.PORT || 4000
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`)
+})
+✅ 7. Criar conexão com o banco
+ts
+Copy
+Edit
+// src/db.ts
+import { Pool } from 'pg'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL
+})
+
+export default pool
+✅ 8. Crie as rotas de tarefas
+ts
+Copy
+Edit
+// src/routes/taskRoutes.ts
+import express from 'express'
+import pool from '../db'
+
+const router = express.Router()
+
+// GET todas as tarefas
+router.get('/', async (_req, res) => {
+  const result = await pool.query('SELECT * FROM Task ORDER BY id DESC')
+  res.json(result.rows)
+})
+
+// POST nova tarefa
+router.post('/', async (req, res) => {
+  const { titulo, descricao, prioridade, status, userId } = req.body
+  const result = await pool.query(
+    'INSERT INTO Task (titulo, descricao, prioridade, status, userId) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+    [titulo, descricao, prioridade, status, userId]
+  )
+  res.status(201).json(result.rows[0])
+})
+
+// PUT editar
+router.put('/:id', async (req, res) => {
+  const { titulo, descricao, prioridade, status } = req.body
+  const { id } = req.params
+  await pool.query(
+    'UPDATE Task SET titulo=$1, descricao=$2, prioridade=$3, status=$4 WHERE id=$5',
+    [titulo, descricao, prioridade, status, id]
+  )
+  res.sendStatus(204)
+})
+
+// DELETE
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params
+  await pool.query('DELETE FROM Task WHERE id = $1', [id])
+  res.sendStatus(204)
+})
+
+export default router
+✅ 9. Crie a tabela Task no banco
+No psql:
+
+sql
+Copy
+Edit
+CREATE TABLE "Task" (
+  id SERIAL PRIMARY KEY,
+  titulo TEXT NOT NULL,
+  descricao TEXT NOT NULL,
+  prioridade TEXT NOT NULL,
+  status TEXT NOT NULL,
+  "userId" INTEGER REFERENCES "User"(id) ON DELETE CASCADE
+);
+✅ 10. Rodar o servidor
+No package.json, adicione:
+
+json
+Copy
+Edit
+"scripts": {
+  "dev": "ts-node-dev src/index.ts"
+}
+E rode:
+
+bash
+Copy
+Edit
+npm run dev
+Se tudo estiver OK, você terá a API disponível em http://localhost:4000/api/tasks.
+
+A seguir posso te ajudar a adaptar o frontend (Redux e Axios) para consumir essa API. Deseja isso?
+
+
+2/2
+
+

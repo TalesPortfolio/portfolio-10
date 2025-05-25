@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  city     String
+  name     String
+  surname  String
+  timezone String  @default("UTC")
+  Event    Event[]
+  Task     Task[]
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  priority    String
+  status      String    @default("en attente")
+  userid      Int
+  createdat   DateTime? @default(now()) @db.Timestamp(6)
+  User        User      @relation(fields: [userid], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model Event {
+  id           Int      @id @default(autoincrement())
+  title        String
+  datetime     DateTime
+  notifyBefore Int
+  notifyEmail  Boolean
+  userId       Int
+  description  String?
+  wasNotified  Boolean  @default(false)
+  User         User     @relation(fields: [userId], references: [id])
+}
